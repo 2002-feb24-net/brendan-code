@@ -1,0 +1,11 @@
+C:\Revature\brendan-code\CPU-github.csproj\obj\Debug\netcoreapp3.1\name.csprojAssemblyReference.cache
+C:\Revature\brendan-code\CPU-github.csproj\obj\Debug\netcoreapp3.1\name.AssemblyInfoInputs.cache
+C:\Revature\brendan-code\CPU-github.csproj\obj\Debug\netcoreapp3.1\name.AssemblyInfo.cs
+C:\Revature\brendan-code\CPU-github.csproj\bin\Debug\netcoreapp3.1\name.exe
+C:\Revature\brendan-code\CPU-github.csproj\bin\Debug\netcoreapp3.1\name.deps.json
+C:\Revature\brendan-code\CPU-github.csproj\bin\Debug\netcoreapp3.1\name.runtimeconfig.json
+C:\Revature\brendan-code\CPU-github.csproj\bin\Debug\netcoreapp3.1\name.runtimeconfig.dev.json
+C:\Revature\brendan-code\CPU-github.csproj\bin\Debug\netcoreapp3.1\name.dll
+C:\Revature\brendan-code\CPU-github.csproj\bin\Debug\netcoreapp3.1\name.pdb
+C:\Revature\brendan-code\CPU-github.csproj\obj\Debug\netcoreapp3.1\name.dll
+C:\Revature\brendan-code\CPU-github.csproj\obj\Debug\netcoreapp3.1\name.pdb
