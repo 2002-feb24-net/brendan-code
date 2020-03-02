@@ -1,0 +1,11 @@
+C:\Revature\FizzBuzz\obj\Debug\netcoreapp3.1\name.csprojAssemblyReference.cache
+C:\Revature\FizzBuzz\obj\Debug\netcoreapp3.1\name.AssemblyInfoInputs.cache
+C:\Revature\FizzBuzz\obj\Debug\netcoreapp3.1\name.AssemblyInfo.cs
+C:\Revature\FizzBuzz\bin\Debug\netcoreapp3.1\name.exe
+C:\Revature\FizzBuzz\bin\Debug\netcoreapp3.1\name.deps.json
+C:\Revature\FizzBuzz\bin\Debug\netcoreapp3.1\name.runtimeconfig.json
+C:\Revature\FizzBuzz\bin\Debug\netcoreapp3.1\name.runtimeconfig.dev.json
+C:\Revature\FizzBuzz\bin\Debug\netcoreapp3.1\name.dll
+C:\Revature\FizzBuzz\bin\Debug\netcoreapp3.1\name.pdb
+C:\Revature\FizzBuzz\obj\Debug\netcoreapp3.1\name.dll
+C:\Revature\FizzBuzz\obj\Debug\netcoreapp3.1\name.pdb
