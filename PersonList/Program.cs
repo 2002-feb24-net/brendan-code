@@ -1,85 +1,71 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PersonList
 {
-    class Person
+    class Program
     {
-        static void Main(string[] args)
-        {
-            string Name = ("N/A");
-            int Age = 0;
-        }
-        private string Name
-        {
-            get
-            {
-                return Name;
-            }
-            set 
-            {
-                Name = value;
-            }
-        }
-        private int Age
-        {
-            get
-            {
-                return Age;
-            }
-            set
-            {
-                Age = value;
-            }
-        }
-        private override string ToString()
-        {
-            return "Name = " + Name + ", Age = " + Age;
-        }
+        // private string Name;
+        // private int Age;
+        // public Person(string inputname, int inputage)
+        // {
+        //     Name = inputname;
+        //     Age = inputage;
+        // }
+    
+        
         static void Main()
         {
-            Person person = new Person();
-            Console.WriteLine("Person details - {0}" person);
+            Person person1 = new Person("John" , 18);
+            Person person2 = new Person("Kenedy" , 40);
+            Person person3 = new Person("Mathew" , 38);
+            Person person4 = new Person("Simon" , 28);
+            Person person5 = new Person("John" , 18);
+            
+            List<Person> people = new List<Person>();
+            people.Add(person1);
+            people.Add(person2);
+            people.Add(person3);
+            people.Add(person4);
+            people.Add(person5);
 
-            person.Name = "Kahwi";
-            person.Age = 30;
-            Console.WriteLine("Person details - {0}" person);
-        }
-        static void Main()
-        {
-            List<Person> persons = new List<Person>();
-
-            persons.Add(new Person { PersonName = "Mark"});
-            persons.Add(new Person { Person2Name = "Apollo"});
-            persons.Add(new Person { Person3Name = "Simon"});
-            persons.Add(new Person { Person4Name = "Jude"});
-            persons.Add(new Person { Person5Name = "Desmond"});
-
-            Console.WriteLine();
-            foreach (Person aPerson in persons)
+            foreach(var person in people)
             {
-                Console.WriteLine(aPerson);
+                System.Console.WriteLine(person.ToString());
             }
-            bool hasDuplicates<T>(List<T> myList)
+
+            HasDuplicate(people);
+            insertSort(people);
+        }
+
+        private static bool HasDuplicate(List<Person> list)
+        {
+            HashSet<String> hash = new HashSet<string>();
+            foreach(var per in list)
             {
-                var name = new HashSet<T>();
-                for (var i = 0; i < myList.count; i++)
+                hash.Add(per.ToString());
+                for(int x = 0; x < list.Count; x++)
                 {
-                    if (!name.Add(myList[i])) 
-                    return true;
-
-                    else
+                    if(per == list[x])
                     {
-                        return false;
+                        return true;
+                        
                     }
                 }
             }
-            static string[] // this method was to implement an insertion and sort method 
-
-
-            // a bubble sort will sort through an array or a group of numbers in pairs over and over until 
-            // the numbers are completely sorted and put in order. 
-            // an insertion sort builds the final sorted array one item at a time until it is finally sorted.
-        
+            return false;
         }
+        
+        static void insertSort (List<Person> Person) {
+            for (int i = 0; i < Person.Count; i++) {
+                Person personAtIndex = Person[i];
+                for (int j = 1; j < i; j++) {
+                    if (personAtIndex.ToString().CompareTo (Person[j].ToString()) < 0)
+                        Person.Remove (personAtIndex);
+                    Person.Insert (j, personAtIndex);
+                }
+            }
+        }
+
     }
 }
