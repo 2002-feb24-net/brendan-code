@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
+
 
 namespace Serialization
 {
     class Program
     {
-        static void Main(string[] args)
+        
+        static async Task Main(string[] args)
         {
             string filePath = "../../../data.json";
             // in.NET, for XML serialization, we have 
@@ -22,26 +25,28 @@ namespace Serialization
                 data = GetInitialData();
                 string json1 = ConvertToJson(data);
 
-                WriteToFile(json1, filePath);
+                await WriteToFileAysnc(json1, filePath);
             }
             else
             {
-                string json3 = ReadFromFile(filePath);
+                string json3 = await ReadFromFileAsync(filePath);
                 data = JsonSerializer.Deserialize<List<Person>>(json3);
             }
             ModifyPersons(data);
             string json2 = ConvertToJson(data);
-            WriteToFile(json2, filePath);
+            await WriteToFileAsync(json2, filePath);
             
         }
-        private static string ReadFromFile(string filePath)
+        
+        private async static Task<string> ReadFromFileAsync(string filePath)
         {
             var sr = new StreamReader(filePath);
-            string text = sr.ReadToEnd();
+            string text = await sr.ReadToEndAsync();
             sr.Close();
             return text;
         }
         private static void ModifyPersons(List<Person> data)
+       
         {
             foreach (var person in data)
             {
@@ -50,11 +55,11 @@ namespace Serialization
         }
 
 
-        private static void WriteToFile(string text, string path)
+        private async static Task WriteToFileAsync(string text, string path)
         {
             var file = new FileStream("data.json", FileMode.Create);
             byte[] data = Encoding.UTF8.GetBytes(text);
-            file.Write(data);
+            await file.WriteAsync(data);
             file.Close();
         }
         static string ConvertToJson(List<Person> data)
